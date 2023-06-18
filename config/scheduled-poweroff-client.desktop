@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Client for scheduled-poweroff-client
+Exec=scheduled-poweroff-client

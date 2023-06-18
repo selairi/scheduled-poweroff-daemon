@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+if [[ $1 == "-m" ]] ; then
+  busctl call local.sheduledpoweroffdaemon /SheduledPowerOffDaemon local.sheduledpoweroffdaemon SendMsgPowerOff s $2
+elif [[ $1 == "-s" ]] ; then
+  busctl call local.sheduledpoweroffdaemon /SheduledPowerOffDaemon local.sheduledpoweroffdaemon PowerOff
+else
+  echo $0 [-m hour] [-s]
+  echo '-m hour' A dialog is shown to clients with "hour". This is not shutdown the copmputer, only shows the warning to users.
+  echo '-s' It will shutdown the computer.
+fi
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Power off daemon
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/scheduled-poweroff-daemon
+
+[Install]
+WantedBy=multi-user.target
